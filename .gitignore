@@ -1,0 +1,7 @@
+config.json
+*.png
+*.jpg
+*.jpeg
+*.gif
+__pycache__/
+*.pyc
