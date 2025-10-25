@@ -24,3 +24,19 @@ manager.display_all_products()
 # Prikaz ukupne vrednosti inventara
 total_value = manager.get_total_inventory_value()
 print(f"\nUkupna vrednost inventara: {total_value:.2f} KM")
+
+from cart import Cart # Dodajte na početak main.py
+
+# --- TESTIRANJE KLASNE CART ---
+
+# Kreiranje instance Cart
+customer_cart = Cart()
+
+# Dodavanje proizvoda u korpu (koristimo postojeće objekte p1, p2, p3)
+customer_cart.add_product_to_cart(p1, 1) # Laptop
+customer_cart.add_product_to_cart(p2, 2) # Miš
+customer_cart.add_product_to_cart(p3, 1) # Tastatura
+customer_cart.add_product_to_cart(p2, 3) # Dodavanje još Miša
+
+# Prikaz sadržaja korpe i ukupne vrednosti
+customer_cart.display_cart_contents()
